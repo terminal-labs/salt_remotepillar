@@ -7,3 +7,6 @@ main:
     - dev2
   'rhel4*':
     - dev2
+  'ip-*':
+    - main
+
