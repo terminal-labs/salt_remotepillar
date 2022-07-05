@@ -1,4 +1,3 @@
-base::
+main::
   'rhel1*':
     - dev1
-
