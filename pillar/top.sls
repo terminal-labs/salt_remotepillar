@@ -1,4 +1,4 @@
-"{{saltenv}}":
+{{saltenv}}:
   'rhel1*':
     - dev1
   'rhel2*':
