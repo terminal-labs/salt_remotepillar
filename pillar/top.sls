@@ -9,4 +9,3 @@ main:
     - dev2
   'ip-*':
     - main
-
