@@ -1,0 +1,21 @@
+curl -k -u root:salt -b eAPICookie.txt -X POST https: //<RaaS-Hostname>/rpc 
+-H 'X-Xsrftoken: '$(grep -w '_xsrf' eAPICookie.txt | cut -f7)'' 
+-d '{
+    "resource": "cmd",
+    "method": "route_cmd",
+    "kwarg": {
+        "cmd": "local",
+        "fun": "cmd.run",
+        "tgt": {
+            "*": {
+                "tgt": "rhel1",
+                "tgt_type": "glob"
+            }
+        },
+        "arg": {
+            "arg": [
+                "bash /root/script.sh"
+            ]
+        }
+    }
+}

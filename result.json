@@ -1,0 +1,45 @@
+curl -k -u root:salt -b eAPICookie.txt -H 'X-Xsrftoken: '$(grep -w '_xsrf' eAPICookie.txt | cut -f7)'' -X POST https: //3.95.206.103/rpc -d '{
+"resource": "cmd",
+"method": "get_cmd_details",
+"kwarg": {
+    "jid": "20220630200406569658"
+}
+}'
+    {
+"riq": 269276187328847,
+"ret": {
+    "count": 4,
+    "results": [
+        {
+            "minion_id": "saltmaster",
+            "master_id": "salt",
+            "has_return": true,
+            "has_errors": false,
+            "alter_time": "2022-06-30T20:04:09.122062"
+        },
+        {
+            "minion_id": "ip-172-31-16-145.ec2.internal",
+            "master_id": "MA1",
+            "has_return": true,
+            "has_errors": false,
+            "alter_time": "2022-06-30T20:04:33.098664"
+        },
+        {
+            "minion_id": "rhel2",
+            "master_id": "MA1",
+            "has_return": true,
+            "has_errors": false,
+            "alter_time": "2022-06-30T20:04:33.137107"
+        },
+        {
+            "minion_id": "rhel1",
+            "master_id": "MA1",
+            "has_return": true,
+            "has_errors": false,
+            "alter_time": "2022-06-30T20:04:33.211603"
+        }
+    ]
+},
+"error": null,
+"warnings": []
+}

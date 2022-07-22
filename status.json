@@ -1,0 +1,18 @@
+curl -k -u root:salt -b eAPICookie.txt -H 'X-Xsrftoken: '$(grep -w '_xsrf' eAPICookie.txt | cut -f7)'' -X POST https: //3.95.206.103/rpc -d '{
+"resource": "cmd",
+"method": "get_cmd_status",
+"kwarg": {
+    "jids": [
+        "20220630200406569658"
+    ]
+}
+}'
+
+{
+"riq": 181876476608852,
+"ret": [
+    "complete"
+],
+"error": null,
+"warnings": []
+}

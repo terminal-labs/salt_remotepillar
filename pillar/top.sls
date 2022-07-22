@@ -1,11 +1,11 @@
 main:
   'rhel3*':
-    - dev1
+    - dev2
   'rhel4*':
-    - dev1
+    - dev2
   'rhel1*':
-    - dev2
+    - dev1
   'rhel2*':
-    - dev2
+    - dev1
   'ip-*':
     - main
